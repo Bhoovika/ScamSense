@@ -1,0 +1,10 @@
+{
+  "notebook": "NB10 Power BI Dashboard Prep",
+  "tables_populated": [
+    "predictions",
+    "model_metrics",
+    "dataset_overview"
+  ],
+  "status": "complete",
+  "connection_method": "Supabase REST API (HTTPS)"
+}

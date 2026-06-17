@@ -1,0 +1,212 @@
+[
+  {
+    "id": "spf_001",
+    "scam_type": "overview",
+    "topic": "Overall scam situation 2025",
+    "text": "In 2025, scam and cybercrime cases decreased by 24.8% to 41,974 cases, from 55,810 cases in 2024. Scam cases fell by 27.6% to 37,308 cases. Total losses from scams fell by 17.9% to about $913.1 million. Despite the decrease, the situation remains very concerning and tackling scams remains a key priority for the Singapore Government.",
+    "source_page": 1
+  },
+  {
+    "id": "spf_002",
+    "scam_type": "overview",
+    "topic": "Self-effected transfers and social engineering",
+    "text": "The percentage of total reported scams involving self-effected transfers was 81.8% in 2025. Scammers did not gain direct control of victims' accounts but manipulated them into performing monetary transactions through deception and social engineering. The SPF urges the public to exercise caution when making fund transfers, such as by verifying the legitimacy of such requests.",
+    "source_page": 4
+  },
+  {
+    "id": "spf_003",
+    "scam_type": "overview",
+    "topic": "Cryptocurrency losses 2025",
+    "text": "Cryptocurrency losses accounted for about $182.2 million, or about 20% of total scam losses in 2025. Scammers leverage cryptocurrency because of its irreversible transactions and limited traceability, making asset recovery very challenging. Tether, Ethereum, and Bitcoin were the top cryptocurrencies lost, accounting for about 91.7% of total cryptocurrency scam losses.",
+    "source_page": 3
+  },
+  {
+    "id": "spf_004",
+    "scam_type": "overview",
+    "topic": "Top scam types by cases 2025",
+    "text": "In 2025, the top five scam types by number of cases were: e-commerce scams (6,703 cases, 18.0%), phishing scams (6,264 cases, 16.8%), job scams (5,575 cases, 14.9%), investment scams (5,462 cases, 14.6%), and government officials impersonation scams (3,363 cases, 9.0%).",
+    "source_page": 4
+  },
+  {
+    "id": "spf_005",
+    "scam_type": "overview",
+    "topic": "Top scam types by losses 2025",
+    "text": "In 2025, the top five scam types by amount lost were: investment scams ($336.2M, 36.8%), government officials impersonation scams ($242.9M, 26.6%), job scams ($123.5M, 13.5%), phishing scams ($39.9M, 4.4%), and business email compromise scams ($35.3M, 3.9%). Total scam losses in 2025 were $913.1 million.",
+    "source_page": 5
+  },
+  {
+    "id": "spf_006",
+    "scam_type": "investment",
+    "topic": "Investment scam statistics 2025",
+    "text": "Investment scams recorded the highest losses among all scam types in 2025: $336.2 million, a 4.8% increase from $320.7 million in 2024. There were 5,462 investment scam cases in 2025, a decrease of 19.8% from 6,814 cases in 2024. The average loss per victim was $61,559 \u2014 the highest average loss among the top scam types.",
+    "source_page": 7
+  },
+  {
+    "id": "spf_007",
+    "scam_type": "investment",
+    "topic": "Investment scam tactics \u2014 Telegram and Facebook",
+    "text": "Investment scam victims came across opportunities through recommendations from online friends, internet searches, online advertisements, or were added into chat groups via messaging platforms. The most common platforms used by investment scammers were Telegram and Facebook. Victims were enticed by false testimonies and instructed to transfer money to specified bank accounts or make payments via bank cards for investing.",
+    "source_page": 18
+  },
+  {
+    "id": "spf_008",
+    "scam_type": "investment",
+    "topic": "Investment scam \u2014 cryptocurrency tactics",
+    "text": "Investment scams accounted for 38.4% of all scam cases involving cryptocurrency transactions in 2025. Scammers directed victims to create new cryptocurrency accounts, fund them with money from bank accounts, buy cryptocurrency, then transfer it to scammer-controlled accounts. In some cases, victims shared their cryptocurrency account login credentials and seed phrase with scammers, allowing scammers to drain the account.",
+    "source_page": 18
+  },
+  {
+    "id": "spf_009",
+    "scam_type": "investment",
+    "topic": "Investment scam \u2014 fake apps and withdrawal fees",
+    "text": "Scammers asked victims to download shell investment apps from official app stores. These apps promoted fraudulent investment products such as fake cryptocurrency, forex, and stock-trading products, and showed fictitious investment progress and returns. Victims discovered they were scammed only when they experienced difficulties withdrawing returns despite transferring increasingly large sums of fees or taxes.",
+    "source_page": 19
+  },
+  {
+    "id": "spf_010",
+    "scam_type": "impersonation",
+    "topic": "Government impersonation scam statistics 2025",
+    "text": "Government officials impersonation scams more than doubled in 2025, increasing by 123.6% to 3,363 cases from 1,504 cases in 2024. It recorded the second highest losses among all scam types: $242.9 million, a 60.5% increase from $151.3 million in 2024. The average loss per victim was $72,229 \u2014 the highest of all scam types.",
+    "source_page": 6
+  },
+  {
+    "id": "spf_011",
+    "scam_type": "impersonation",
+    "topic": "Government impersonation \u2014 bank and local official variant",
+    "text": "In 91.7% of government impersonation cases, victims received unsolicited calls from scammers posing as bank or financial institution representatives citing suspicious transactions. Victims were then transferred to fake government officials who accused them of money laundering and instructed them to transfer money to safety accounts or hand over cash for investigation purposes.",
+    "source_page": 17
+  },
+  {
+    "id": "spf_012",
+    "scam_type": "impersonation",
+    "topic": "Singapore government officials will never ask these things",
+    "text": "Singapore Government officials will never ask members of the public to do the following over a phone call: ask you to transfer money; ask you to disclose banking login details; ask you to install mobile apps from unofficial app stores; or transfer your call to the Police. Never transfer monies, hand monies or valuables to any unknown person or person whose identity you did not verify.",
+    "source_page": 18
+  },
+  {
+    "id": "spf_013",
+    "scam_type": "impersonation",
+    "topic": "Government impersonation \u2014 new PayNow and crypto transfer tactics",
+    "text": "New trends observed in 2025 for government impersonation scams include: transfer of funds from victims' bank accounts to Payment Service Provider accounts (e.g. YouTrip) controlled by scammers via PayNow; and cryptocurrency transfers by requesting victims to create a new cryptocurrency account, fund it from their bank account, and transfer cryptocurrency to scammer-controlled accounts.",
+    "source_page": 17
+  },
+  {
+    "id": "spf_014",
+    "scam_type": "job",
+    "topic": "Job scam statistics 2025",
+    "text": "Job scams recorded 5,575 cases in 2025, a significant decrease of 38.4% from 9,043 cases in 2024. Total losses were $123.5 million, down from $156.2 million in 2024. The average loss per victim was $22,163. Job scams were the third highest scam type by both number of cases and total losses in 2025.",
+    "source_page": 16
+  },
+  {
+    "id": "spf_015",
+    "scam_type": "job",
+    "topic": "Job scam tactics \u2014 upfront fees and fake tasks",
+    "text": "Job scammers typically advertise easy work-from-home jobs with high pay on social media and messaging platforms. Victims are asked to pay registration fees, training fees, or deposits before starting work. Some scams involve completing online tasks such as liking posts or boosting products, where initial small payments are made to build trust before victims are asked for large sums that are never returned.",
+    "source_page": 16
+  },
+  {
+    "id": "spf_016",
+    "scam_type": "job",
+    "topic": "Job scam \u2014 victim age profile",
+    "text": "Job scams disproportionately affected young adults aged 20 to 29, who made up 19.9% of all scam victims in 2025, with 17.8% of young adult victims falling prey to job scams. Adults aged 30 to 49 also had high exposure, with 17.6% falling prey to job scams. Legitimate employers do not ask for upfront fees before employment.",
+    "source_page": 9
+  },
+  {
+    "id": "spf_017",
+    "scam_type": "phishing",
+    "topic": "Phishing scam statistics 2025",
+    "text": "Phishing scams recorded the second highest number of cases in 2025: 6,264 cases, a 26.8% decrease from 8,552 cases in 2024. Total losses decreased by 32.8% to $39.9 million from $59.4 million in 2024. The average loss per phishing victim was $6,384.",
+    "source_page": 7
+  },
+  {
+    "id": "spf_018",
+    "scam_type": "phishing",
+    "topic": "Phishing scam tactics \u2014 card details and OTP theft",
+    "text": "Phishing scams in 2025 predominantly involved unauthorised card transactions where victims unknowingly submitted their card details and authentication codes via OTP or digital token to scammers, to complete seemingly legitimate purchases. Victims were directed to fake websites impersonating banks, government agencies, or e-commerce platforms.",
+    "source_page": 7
+  },
+  {
+    "id": "spf_019",
+    "scam_type": "phishing",
+    "topic": "Phishing contact methods \u2014 SMS and email links",
+    "text": "Phishing scammers predominantly contact victims via SMS, email, and messaging platforms containing links to fraudulent websites. The major retail banks have phased out SMS one-time passwords for authentication of debit or credit card transactions for digital token users. Never click on links in unsolicited messages \u2014 go directly to your bank's official website or app.",
+    "source_page": 11
+  },
+  {
+    "id": "spf_020",
+    "scam_type": "ecommerce",
+    "topic": "E-commerce scam statistics 2025",
+    "text": "E-commerce scams recorded the highest number of cases among all scam types in 2025: 6,703 cases, despite a 42.5% decrease from 11,665 cases in 2024. Total losses were $16.7 million, down 4.6% from $17.5 million in 2024. The average loss per victim was $2,503.",
+    "source_page": 6
+  },
+  {
+    "id": "spf_021",
+    "scam_type": "ecommerce",
+    "topic": "E-commerce scam platforms and payment methods",
+    "text": "Carousell and Facebook Marketplace were the platforms most commonly used by e-commerce scammers, accounting for 29.0% and 22.2% of cases respectively. After expressing interest in a product, victims were instructed to make payment or an initial deposit via PayNow or bank transfer. They realised they had been scammed when they failed to receive the products or when sellers became uncontactable.",
+    "source_page": 6
+  },
+  {
+    "id": "spf_022",
+    "scam_type": "ecommerce",
+    "topic": "E-commerce scam \u2014 Pokemon cards most common item",
+    "text": "Pokemon trading cards were the item most commonly involved in e-commerce scams in 2025, making up 13.6% of e-commerce cases. Other commonly scammed items included electronics, concert tickets, and luxury goods. Victims should use platforms' protected payment features and meet sellers in person for high-value transactions.",
+    "source_page": 6
+  },
+  {
+    "id": "spf_023",
+    "scam_type": "love",
+    "topic": "Internet love scam statistics 2025",
+    "text": "Internet love scams recorded 917 cases in 2025, up 7.6% from 852 cases in 2024. Total losses were $24.9 million, down slightly from $27.6 million. The average loss per love scam victim was $27,202 \u2014 significantly higher than e-commerce or phishing scams, reflecting the extended trust-building process scammers employ.",
+    "source_page": 16
+  },
+  {
+    "id": "spf_024",
+    "scam_type": "love",
+    "topic": "Love scam tactics \u2014 online relationship and money requests",
+    "text": "Love scammers build relationships with victims over weeks or months through dating apps, social media, or messaging platforms. They create convincing personas, often claiming to be overseas professionals. Once sufficient trust is established, they fabricate emergencies or investment opportunities requiring the victim to send money. Red flags include refusal to video call, claims of being stranded overseas, and requests for urgent fund transfers.",
+    "source_page": 16
+  },
+  {
+    "id": "spf_025",
+    "scam_type": "overview",
+    "topic": "Online platforms used by scammers 2025",
+    "text": "Online platforms were used by scammers to reach victims in 84.1% of all scam cases in 2025. Meta platforms were involved in 35.4% of all cases, with Facebook alone accounting for 18.0%. The top contact methods were social media (10,448 cases), messaging platforms (9,355 cases), phone calls (5,477 cases), and online shopping platforms (3,804 cases).",
+    "source_page": 8
+  },
+  {
+    "id": "spf_026",
+    "scam_type": "overview",
+    "topic": "WhatsApp and Telegram used most for scam contact",
+    "text": "Among messaging platforms, WhatsApp accounted for 53.5% of cases, Telegram for 37.9%, and Facebook Messenger for 4.2%. Among social media, Facebook accounted for 51.9%, TikTok 26.0%, and Instagram 14.2% of scam contact cases.",
+    "source_page": 8
+  },
+  {
+    "id": "spf_027",
+    "scam_type": "overview",
+    "topic": "Scam victim age profile 2025",
+    "text": "In 2025, 85.2% of scam victims were aged below 65. Adults aged 30-49 made up 36.1% of victims, average loss $22,283. Young seniors aged 50-64 made up 23.6%, average loss $32,983. The elderly aged 65+ made up 14.8%, with the highest average loss of $37,053 per victim, predominantly falling prey to investment scams, government impersonation scams, and phishing scams.",
+    "source_page": 9
+  },
+  {
+    "id": "spf_028",
+    "scam_type": "overview",
+    "topic": "ScamShield helpline and reporting",
+    "text": "When in doubt, members of the public should call the ScamShield Helpline at 1799, or check the ScamShield application for verification. Report scam cases to the Singapore Police Force at 1800-255-0000 or online at police.gov.sg/i-witness. Report phishing links to report@scamalert.sg. Check investment legitimacy at the MAS Investor Alert List: mas.gov.sg.",
+    "source_page": 13
+  },
+  {
+    "id": "spf_029",
+    "scam_type": "overview",
+    "topic": "Anti-scam measures \u2014 caning and Protection from Scams Act",
+    "text": "From 30 December 2025, caning for scam-related offences was operationalised. Scammers face mandatory caning of at least 6 strokes, up to 24 strokes. Scam mules who launder proceeds may face up to 12 strokes. The Protection from Scams Act, operationalised on 1 July 2025, allows the SPF to issue Restriction Orders to banks to restrict banking facilities of scam victims who continue to believe scammers despite police engagement.",
+    "source_page": 10
+  },
+  {
+    "id": "spf_030",
+    "scam_type": "overview",
+    "topic": "Mule accounts \u2014 do not share bank accounts or Singpass",
+    "text": "Criminal syndicates perpetrate scams in Singapore through local money mules. The public must not allow anyone to use their financial accounts to transfer funds, provide access to Singpass credentials, or supply local SIM cards. In 2025, more than 7,000 money mules and scammers were investigated, and more than 940 have been charged. Individuals found guilty of mule-related crimes may face substantial prison sentences, monetary penalties, and caning.",
+    "source_page": 13
+  }
+]

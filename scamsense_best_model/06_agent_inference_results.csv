@@ -1,0 +1,8 @@
+test_case,label,confidence,language,spf_type,risk_tier,risk_score,top_token
+en / phishing,scam,100.0%,en,Phishing Scam,HIGH,78,suspend
+en / investment,scam,100.0%,en,Investment Scam,CRITICAL,95,now
+ms / job scam,scam,100.0%,ms,Job Scam,HIGH,80,untuk 
+ta / investment,scam,100.0%,ta,Investment Scam,CRITICAL,95,வாய்ப்பு 
+zh / impersonation,ham,100.0%,zh,—,NONE,0,-
+singlish / ecommerce,scam,99.9%,singlish,E-commerce Scam,MEDIUM,59,$
+en / ham,ham,99.4%,en,—,NONE,0,-

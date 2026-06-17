@@ -1,0 +1,13 @@
+{
+  "notebook": "NB11 Drift Detection + MLflow + CI/CD",
+  "outputs": {
+    "drift_report": "/kaggle/working/drift_report.html",
+    "github_actions": "/kaggle/working/github_actions_workflow.yml",
+    "dockerfile": "/kaggle/working/Dockerfile",
+    "requirements_bot": "/kaggle/working/requirements_bot.txt",
+    "deploy_script": "/kaggle/working/deploy.sh"
+  },
+  "mlflow": "https://dagshub.com/Bhoovika/ScamSense.mlflow",
+  "gcp_status": "documented_not_executed",
+  "next": "NB09 Telegram bot, then NB12 GCP Cloud Run deployment"
+}
