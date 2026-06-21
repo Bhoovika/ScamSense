@@ -12,7 +12,7 @@ This document describes all raw datasets used in the ScamSense project for ham a
 | [UCI SMS Spam Collection](#3-uci-sms-spam-collection) | 5,572 | CSV | English | Ham / Scam |  [UCI SMS](https://archive.ics.uci.edu/dataset/228/sms+spam+collection) |
 | [Real/Fake Job Postings](#4-realfake-job-postings) | 17,880 | CSV | English | Real / Fake |  [Kaggle](https://www.kaggle.com/datasets/shivamb/real-or-fake-fake-jobposting-prediction) |
 | [Wikipedia MS/TA/ZH](#5-wikipedia-mstazh) | 15,000 | Parquet | Malay, Tamil, Mandarin | Ham only | [HuggingFace](https://huggingface.co/datasets/wikimedia/wikipedia) |
-| [Synthetic Scam (SPF 2025)](#6-synthetic-scam-dataset-spf-2025) | 20,482 | CSV | English, Singlish, Malay, Tamil, Mandarin | Scam |  [SPF 2025 Report](https://isomer-user-content.by.gov.sg/537/0f81ce7a-8b96-4184-b4bb-89c45954bfcb/2025_annual_scams_and_cybercrime_brief%20(1).pdf) |
+| [Synthetic Scam (SPF 2025)](#6-synthetic-scam-dataset-spf-2025) | 23,255 | CSV | English, Singlish, Malay, Tamil, Mandarin | Scam |  [SPF 2025 Report](https://isomer-user-content.by.gov.sg/537/0f81ce7a-8b96-4184-b4bb-89c45954bfcb/2025_annual_scams_and_cybercrime_brief%20(1).pdf) |
 
 > **Label note:** "Ham" = legitimate messages. "Scam" = fraudulent messages.
 
@@ -20,10 +20,10 @@ This document describes all raw datasets used in the ScamSense project for ham a
 
 ## Dataset Breakdown (Scam vs Ham)
 
-### Scam Data (Total: 64,986 rows)
+### Scam Data (Total: 67,759 rows)
 
 * Phishing Email (scam only): 42,891
-* Synthetic SPF 2025 scams: 20,482
+* Synthetic SPF 2025 scams: 23,255
 * Fake job postings: 866
 * UCI SMS spam: 747
 
@@ -43,7 +43,7 @@ This document describes all raw datasets used in the ScamSense project for ham a
 
 ## Key Dataset Insights
 
-* Strong class imbalance: ham (163K) vs scam (64K)
+* Strong class imbalance: ham (163K) vs scam (67K)
 * Largest ham source: NUS SMS Corpus (Singapore context)
 * Largest scam source: Phishing Email dataset
 * Synthetic dataset adds Singapore-specific multilingual scam patterns
@@ -55,8 +55,8 @@ This document describes all raw datasets used in the ScamSense project for ham a
 
 | Metric | Value |
 |---|---|
-| Total raw records | ~228,715 rows |
-| Scam rows | 64,986 |
+| Total raw records | ~231,488 rows |
+| Scam rows | 67,759 |
 | Ham rows | 163,729 |
 | Languages | English, Singlish, Malay, Tamil, Mandarin |
 | Formats | CSV, JSON, Parquet |
