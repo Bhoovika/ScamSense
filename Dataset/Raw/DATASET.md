@@ -7,12 +7,12 @@ This document describes all raw datasets used in the ScamSense project for ham a
 ## Dataset Overview
 | Dataset | Records | Format | Language(s) | Label Type | Source |
 |---|---|---|---|---|---|
-| [Phishing Email Dataset](#1-phishing-email-dataset) | 82,486 | CSV | English | Ham / Scam | [Kaggle](https://www.kaggle.com/datasets/naserabdullahalam/phishing-email-dataset) |
-| [NUS SMS Corpus](#2-nus-sms-corpus) | 87,295 | JSON | Singlish, Mandarin | Ham only |  [Kaggle](https://www.kaggle.com/datasets/rtatman/the-national-university-of-singapore-sms-corpus) |
-| [UCI SMS Spam Collection](#3-uci-sms-spam-collection) | 5,572 | CSV | English | Ham / Scam |  [UCI SMS](https://archive.ics.uci.edu/dataset/228/sms+spam+collection) |
-| [Real/Fake Job Postings](#4-realfake-job-postings) | 17,880 | CSV | English | Real / Fake |  [Kaggle](https://www.kaggle.com/datasets/shivamb/real-or-fake-fake-jobposting-prediction) |
-| [Wikipedia MS/TA/ZH](#5-wikipedia-mstazh) | 15,000 | Parquet | Malay, Tamil, Mandarin | Ham only | [HuggingFace](https://huggingface.co/datasets/wikimedia/wikipedia) |
-| [Synthetic Scam](#6-synthetic-scam-dataset-spf-2025) | 23,255 | CSV | English, Singlish, Malay, Tamil, Mandarin | Scam |  [Synthetic Scam](https://tinyurl.com/7mdrhwtd) |
+| Phishing Email Dataset | 82,486 | CSV | English | Ham / Scam | [Kaggle](https://www.kaggle.com/datasets/naserabdullahalam/phishing-email-dataset) |
+| NUS SMS Corpus | 87,295 | JSON | Singlish, Mandarin | Ham only |  [Kaggle](https://www.kaggle.com/datasets/rtatman/the-national-university-of-singapore-sms-corpus) |
+| UCI SMS Spam Collection | 5,572 | CSV | English | Ham / Scam |  [UCI SMS](https://archive.ics.uci.edu/dataset/228/sms+spam+collection) |
+| Real/Fake Job Postings | 17,880 | CSV | English | Real / Fake |  [Kaggle](https://www.kaggle.com/datasets/shivamb/real-or-fake-fake-jobposting-prediction) |
+| Wikipedia MS/TA/ZH | 15,000 | Parquet | Malay, Tamil, Mandarin | Ham only | [HuggingFace](https://huggingface.co/datasets/wikimedia/wikipedia) |
+| Synthetic Scam | 23,255 | CSV | English, Singlish, Malay, Tamil, Mandarin | Scam |  [Synthetic Scam](https://tinyurl.com/7mdrhwtd) |
 
 > **Label note:** "Ham" = legitimate messages. "Scam" = fraudulent messages.
 
