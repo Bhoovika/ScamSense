@@ -12,7 +12,7 @@ This document describes all raw datasets used in the ScamSense project for ham a
 | UCI SMS Spam Collection | 5,572 | CSV | English | Ham / Scam |  [UCI SMS](https://archive.ics.uci.edu/dataset/228/sms+spam+collection) |
 | Real/Fake Job Postings | 17,880 | CSV | English | Real / Fake |  [Kaggle](https://www.kaggle.com/datasets/shivamb/real-or-fake-fake-jobposting-prediction) |
 | Wikipedia MS/TA/ZH | 15,000 | Parquet | Malay, Tamil, Mandarin | Ham only | [HuggingFace](https://huggingface.co/datasets/wikimedia/wikipedia) |
-| Synthetic Scam | 23,255 | CSV | English, Singlish, Malay, Tamil, Mandarin | Scam |  [Synthetic Scam](https://tinyurl.com/7mdrhwtd) |
+| Synthetic Scam | 24,383 | CSV | English, Singlish, Malay, Tamil, Mandarin | Scam |  [Synthetic Scam](https://tinyurl.com/7mdrhwtd) |
 
 > **Label note:** "Ham" = legitimate messages. "Scam" = fraudulent messages.
 
@@ -20,10 +20,10 @@ This document describes all raw datasets used in the ScamSense project for ham a
 
 ## Dataset Breakdown (Scam vs Ham)
 
-### Scam Data (Total: 67,759 rows)
+### Scam Data (Total: 68,887 rows)
 
 * Phishing Email (scam only): 42,891
-* Synthetic scams(SPF 2025 as a base): 23,255
+* Synthetic scams(SPF 2025 as a base): 24,383
 * Fake job postings: 866
 * UCI SMS spam: 747
 
@@ -43,7 +43,7 @@ This document describes all raw datasets used in the ScamSense project for ham a
 
 ## Key Dataset Insights
 
-* Strong class imbalance: ham (163K) vs scam (67K)
+* Strong class imbalance: ham (163K) vs scam (68K)
 * Largest ham source: NUS SMS Corpus (Singapore context)
 * Largest scam source: Phishing Email dataset
 * Synthetic dataset adds Singapore-specific multilingual scam patterns
@@ -55,8 +55,8 @@ This document describes all raw datasets used in the ScamSense project for ham a
 
 | Metric | Value |
 |---|---|
-| Total raw records | ~231,488 rows |
-| Scam rows | 67,759 |
+| Total raw records | ~232,616 rows |
+| Scam rows | 68,887 |
 | Ham rows | 163,729 |
 | Languages | English, Singlish, Malay, Tamil, Mandarin |
 | Formats | CSV, JSON, Parquet |
