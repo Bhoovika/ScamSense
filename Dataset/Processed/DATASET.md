@@ -8,10 +8,10 @@ This document describes the processed and balanced dataset used for training and
 
 | Dataset | Records | Language(s) | Label Type | Split | Source |
 |---|---|---|---|---|---|
-| `scamsense_full_dataset.csv` | 134,818 | English, Singlish, Malay, Tamil, Mandarin | Ham / Scam | Full dataset |[Link](https://tinyurl.com/3y3tcc2t) |
-| `train.csv` | 94,372 | English, Singlish, Malay, Tamil, Mandarin | Ham / Scam | 70% train split |[Link](https://tinyurl.com/4as75n6x)|
-| `val.csv` | 20,223 | English, Singlish, Malay, Tamil, Mandarin | Ham / Scam | 15% val split |[Link](https://tinyurl.com/3jzk9ms9)|
-| `test.csv` | 20,223 | English, Singlish, Malay, Tamil, Mandarin | Ham / Scam | 15% test split |[Link](https://tinyurl.com/2r8y5vfy)|
+| `scamsense_full_dataset.csv` | 136,930 | English, Singlish, Malay, Tamil, Mandarin | Ham / Scam | Full dataset |[Link](https://tinyurl.com/3y3tcc2t) |
+| `train.csv` | 95,851 | English, Singlish, Malay, Tamil, Mandarin | Ham / Scam | 70% train split |[Link](https://tinyurl.com/4as75n6x)|
+| `val.csv` | 20,539 | English, Singlish, Malay, Tamil, Mandarin | Ham / Scam | 15% val split |[Link](https://tinyurl.com/3jzk9ms9)|
+| `test.csv` | 20,540 | English, Singlish, Malay, Tamil, Mandarin | Ham / Scam | 15% test split |[Link](https://tinyurl.com/2r8y5vfy)|
 
 > **Label note:** "Ham" = legitimate messages (label 0). "Scam" = fraudulent messages (label 1). All splits are perfectly balanced at 50/50.
 
@@ -20,11 +20,11 @@ This document describes the processed and balanced dataset used for training and
 
 | Stage | Records | Notes |
 |---|---|---|
-| Raw merged (scam + ham) | 231,488 | Combined all raw sources |
-| After null removal | 231,488 | No nulls found |
-| After short-text filter | 224,544 | Removed 6,944 rows |
-| After deduplication | 214,964 | Removed 9,580 duplicates |
-| After per-language balancing | 134,818 | Undersampled ham per language |
+| Raw merged (scam + ham) | 232,616 | Combined all raw sources |
+| After null removal | 232,616 | No nulls found |
+| After short-text filter | 225,672 | Removed 6,944 rows |
+| After deduplication | 210,929 | Removed 14,743 duplicates |
+| After punctuation-only removal | 209,447 | Removed 1,482 rows |
 
 ---
 
@@ -32,23 +32,23 @@ This document describes the processed and balanced dataset used for training and
 
 | Label | Count |
 |---|---|
-| 0 (Ham) | 147,555 |
-| 1 (Scam) | 67,409 |
-| **Total** | **214,964** |
+| 0 (Ham) | 140,982 |
+| 1 (Scam) | 68,465 |
+| **Total** | **209,447** |
 
-> Strong class imbalance observed: ~2.1× more ham than scam before balancing.
+> Strong class imbalance observed: ~2× more ham than scam before balancing.
 
 ---
 
 ## Per-Language Label Breakdown (Post-Cleaning, Pre-Balancing)
 
-| Language | Ham (0) | Scam (1) | Ham:Scam Ratio |
-|---|---|---|---|
-| English (`en`) | 58,765 | 49,155 | 1.20:1 |
-| Singlish (`singlish`) | 47,957 | 3,704 | 12.9:1 |
-| Chinese (`zh`) | 30,862 | 4,991 | 6.1:1 |
-| Tamil (`ta`) | 4,997 | 4,728 | 1.05:1 |
-| Malay (`ms`) | 4,974 | 4,831 | 1.02:1 |
+| Language | Ham (0) | Scam (1) |
+|---|---|---|
+| English (`en`) | 58,563 | 49,093 |
+| Singlish (`singlish`) | 43,115 | 5,000 |
+| Chinese (`zh`) | 29,333 | 4,962 |
+| Tamil (`ta`) | 4,997 | 4,637 |
+| Malay (`ms`) | 4,974 | 4,773 |
 
 > Singlish and Chinese show the most severe imbalance, reflecting the scarcity of non-English scam samples in raw sources.
 
@@ -58,37 +58,13 @@ This document describes the processed and balanced dataset used for training and
 
 **Method:** Per-language random undersampling of the majority class (ham) to match the minority class (scam) count within each language group.
 
-| Language | Scam Count | Ham (original) | Ham (undersampled) | Reduction |
-|---|---|---|---|---|
-| English (`en`) | 49,155 | 58,765 | 49,155 | −9,610 |
-| Singlish (`singlish`) | 3,704 | 47,957 | 3,704 | −44,253 |
-| Chinese (`zh`) | 4,991 | 30,862 | 4,991 | −25,871 |
-| Tamil (`ta`) | 4,728 | 4,997 | 4,728 | −269 |
-| Malay (`ms`) | 4,831 | 4,974 | 4,831 | −143 |
-
----
-
-## Final Balanced Dataset
-
-### Overall
-
-| Metric | Value |
-|---|---|
-| Total rows | 134,818 |
-| Ham (label 0) | 67,409 |
-| Scam (label 1) | 67,409 |
-| Balance ratio | 50% / 50% |
-
-### Per-Language Balanced Counts
-
-| Language | Ham (0) | Scam (1) | Total |
+| Language | Scam Count | Ham (original) | Ham (undersampled) |
 |---|---|---|---|
-| English (`en`) | 49,155 | 49,155 | 98,310 |
-| Tamil (`ta`) | 4,728 | 4,728 | 9,456 |
-| Chinese (`zh`) | 4,991 | 4,991 | 9,982 |
-| Singlish (`singlish`) | 3,704 | 3,704 | 7,408 |
-| Malay (`ms`) | 4,831 | 4,831 | 9,662 |
-| **Total** | **67,409** | **67,409** | **134,818** |
+| English (`en`) | 49,093 | 58,563 | 49,093 |
+| Singlish (`singlish`) | 5,000 | 43,115 | 5,000 |
+| Chinese (`zh`) | 4,962 | 29,333 | 4,962 |
+| Tamil (`ta`) | 4,637 | 4,997 | 4,637 |
+| Malay (`ms`) | 4,773 | 4,974 | 4,773 |
 
 ---
 
@@ -96,9 +72,9 @@ This document describes the processed and balanced dataset used for training and
 
 | Metric | Value |
 |---|---|
-| Final processed records | 134,818 |
-| Ham rows | 67,409 |
-| Scam rows | 67,409 |
+| Final processed records | 136,930 |
+| Ham rows | 68,465 |
+| Scam rows | 68,465 |
 | Languages | English, Singlish, Malay, Tamil, Mandarin |
 | Class balance | Perfectly balanced (50/50) |
 | Balancing method | Per-language ham undersampling |
@@ -108,7 +84,7 @@ This document describes the processed and balanced dataset used for training and
 
 ## Key Observations
 
-- **Perfect global balance** achieved (50/50) while preserving the natural language distribution of scam samples.
+- **Perfect balance** achieved (50/50) while preserving the natural language distribution of scam samples.
 - **Singlish** had the most aggressive undersampling, reflecting a large NUS SMS corpus but limited Singlish-specific scam data.
-- **Malay** was the most naturally balanced language pre-balancing (~1.02:1 ratio), requiring minimal adjustment.
+- **Malay** was the most naturally balanced language pre-balancing, requiring minimal adjustment.
 - **English** dominates the final dataset (76.1%), consistent with the largest raw scam source being the Phishing Email dataset.
