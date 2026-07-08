@@ -12,7 +12,7 @@ This document describes all raw datasets used in the ScamSense project for ham a
 | UCI SMS Spam Collection | 5,572 | CSV | English | Ham / Scam |  [UCI SMS](https://archive.ics.uci.edu/dataset/228/sms+spam+collection) |
 | Real/Fake Job Postings | 17,880 | CSV | English | Real / Fake |  [Kaggle](https://www.kaggle.com/datasets/shivamb/real-or-fake-fake-jobposting-prediction) |
 | Wikipedia MS/TA/ZH | 15,000 | Parquet | Malay, Tamil, Mandarin | Ham only | [HuggingFace](https://huggingface.co/datasets/wikimedia/wikipedia) |
-| Synthetic Scam | 24,383 | CSV | English, Singlish, Malay, Tamil, Mandarin | Scam |  [Synthetic Scam](https://tinyurl.com/7mdrhwtd) |
+| Synthetic Scam | 24,383 | CSV | English, Singlish, Malay, Tamil, Mandarin | Scam |  [Synthetic Scam](https://tinyurl.com/5ys6r6dn) |
 
 > **Label note:** "Ham" = legitimate messages. "Scam" = fraudulent messages.
 
