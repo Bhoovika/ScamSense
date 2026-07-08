@@ -8,10 +8,10 @@ This document describes the processed and balanced dataset used for training and
 
 | Dataset | Records | Language(s) | Label Type | Split | Source |
 |---|---|---|---|---|---|
-| `scamsense_full_dataset.csv` | 136,930 | English, Singlish, Malay, Tamil, Mandarin | Ham / Scam | Full dataset |[Link](https://tinyurl.com/3y3tcc2t) |
-| `train.csv` | 95,851 | English, Singlish, Malay, Tamil, Mandarin | Ham / Scam | 70% train split |[Link](https://tinyurl.com/4as75n6x)|
-| `val.csv` | 20,539 | English, Singlish, Malay, Tamil, Mandarin | Ham / Scam | 15% val split |[Link](https://tinyurl.com/3jzk9ms9)|
-| `test.csv` | 20,540 | English, Singlish, Malay, Tamil, Mandarin | Ham / Scam | 15% test split |[Link](https://tinyurl.com/2r8y5vfy)|
+| `scamsense_full_dataset.csv` | 136,930 | English, Singlish, Malay, Tamil, Mandarin | Ham / Scam | Full dataset |[Link](https://tinyurl.com/5ys6r6dn) |
+| `train.csv` | 95,851 | English, Singlish, Malay, Tamil, Mandarin | Ham / Scam | 70% train split |[Link](https://tinyurl.com/5ys6r6dn)|
+| `val.csv` | 20,539 | English, Singlish, Malay, Tamil, Mandarin | Ham / Scam | 15% val split |[Link](https://tinyurl.com/5ys6r6dn)|
+| `test.csv` | 20,540 | English, Singlish, Malay, Tamil, Mandarin | Ham / Scam | 15% test split |[Link](https://tinyurl.com/5ys6r6dn)|
 
 > **Label note:** "Ham" = legitimate messages (label 0). "Scam" = fraudulent messages (label 1). All splits are perfectly balanced at 50/50.
 
