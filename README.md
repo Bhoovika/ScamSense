@@ -222,7 +222,6 @@ curl -X POST http://localhost:8000/predict \
 
 ## Future Work
 
-- Fully consolidate all LangGraph and FastAPI logic into `scamsense_pipeline.py` to eliminate remaining drift.
 - Expand Tamil and Malay keyword sets in the risk-scoring agent.
 - Tune the Singlish particle-density threshold for better recall on short messages.
 - Targeted data augmentation for English, the current weakest-performing language.
