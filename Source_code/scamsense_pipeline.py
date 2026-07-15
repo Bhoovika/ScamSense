@@ -43,7 +43,7 @@ from langdetect import detect, LangDetectException  # fallback language detector
 # ---------------------------------------------------------------------------
 # Config / lazily-loaded globals
 # ---------------------------------------------------------------------------
-HF_MODEL_ID = "Bhoovika/scamsense-xlmroberta"       # HuggingFace repo for the trained classifier
+HF_MODEL_ID = "Bhoovika/scamsense-xlmroberta-new1"       # HuggingFace repo for the trained classifier
 EMBEDDER_MODEL_ID = "paraphrase-multilingual-MiniLM-L12-v2"  # sentence embedder for RAG retrieval
 LABEL_MAP = {0: "ham", 1: "scam"}                    # classifier output index -> label name
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"  # use GPU if available, else CPU
@@ -81,7 +81,10 @@ def init(
     index_path: Optional[Path] = None,
     embeddings_path: Optional[Path] = None,
     build_index_if_missing: bool = True,
+    model_path: Optional[str] = None,   # NEW: local path (e.g. Kaggle dataset dir) overrides HF_MODEL_ID
+    embedder_path: Optional[str] = None,    # NEW: local path for the sentence embedder
 ):
+
     """
     Load all heavy resources once per process.
 
@@ -103,15 +106,29 @@ def init(
         embeddings_path = embeddings_path or (rag_dir / "spf_embeddings.npy")
 
     print(f"Device: {DEVICE}")
-    print(f"Loading tokenizer/model from {HF_MODEL_ID} ...")
-    _clf_tokenizer = AutoTokenizer.from_pretrained(HF_MODEL_ID, token=hf_token)  # load matching tokenizer
-    _clf_model = AutoModelForSequenceClassification.from_pretrained(
-        HF_MODEL_ID, token=hf_token
-    ).to(DEVICE)                                        # load the classifier onto GPU/CPU
+
+    if model_path is not None:
+        # Local path (e.g. a Kaggle Dataset mounted at /kaggle/input/...) — no HF download, no token needed
+        print(f"Loading tokenizer/model from local path {model_path} ...")
+        _clf_tokenizer = AutoTokenizer.from_pretrained(model_path)
+        _clf_model = AutoModelForSequenceClassification.from_pretrained(model_path).to(DEVICE)
+    else:
+        # Default: pull from HuggingFace Hub using HF_MODEL_ID
+        print(f"Loading tokenizer/model from {HF_MODEL_ID} ...")
+        _clf_tokenizer = AutoTokenizer.from_pretrained(HF_MODEL_ID, token=hf_token)
+        _clf_model = AutoModelForSequenceClassification.from_pretrained(
+            HF_MODEL_ID, token=hf_token
+        ).to(DEVICE)
+
     _clf_model.eval()                                   # inference mode: no dropout, no gradients
     print("Classifier loaded")
 
-    _embedder = SentenceTransformer(EMBEDDER_MODEL_ID)   # load the sentence embedder for RAG
+    if embedder_path is not None:
+        print(f"Loading embedder from local path {embedder_path} ...")
+        _embedder = SentenceTransformer(embedder_path)
+    else:
+        print(f"Loading embedder from {EMBEDDER_MODEL_ID} ...")
+        _embedder = SentenceTransformer(EMBEDDER_MODEL_ID)
     print("Embedder loaded")
 
     # ── Load or build the RAG corpus ──────────────────────────────────────
