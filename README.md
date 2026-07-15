@@ -21,19 +21,19 @@ The project is built as five sequential Kaggle notebooks (synthetic data → pre
 - [Credits & Data Sources](#credits--data-sources)
 
 ---
-
 ## Project Pipeline
 
-| Stage | Notebook / Script | Purpose |
-|---|---|---|
-| 1 | `01_synthetic-data-generation.ipynb` | Generates synthetic scam messages in 5 languages via templates + MT |
-| 2 | `02_data-preparation-preprocessing-eda.ipynb` | Merges with real ham/scam datasets, cleans, balances, splits, runs EDA |
-| 3 | `03_modelling.ipynb` | Trains & compares 6 XLM-R / mBERT model configurations |
-| 4 | `04_langgraph_rag.ipynb` | LangGraph 3-agent pipeline: detection → SHAP+RAG explanation → risk scoring |
-| 5 | `05_fastapi_backend.ipynb` | FastAPI REST backend + Telegram bot deployment (notebook version) |
-| — | `scamsense_pipeline.py` | Consolidated detection → explanation → risk pipeline module used by the deployed API/bot |
+| Stage | Notebook / Script                             | Purpose                                                                                  |
+| ----- | --------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| 1     | `01_synthetic-data-generation.ipynb`          | Generates synthetic scam messages in 5 languages via templates + MT                      |
+| 2     | `02_data-preparation-preprocessing-eda.ipynb` | Merges with real ham/scam datasets, cleans, balances, splits, runs EDA                   |
+| 2a    | `02a_mnar_leakage_resolved.ipynb`              | Retrains Experiment 2 with tokenizer-only truncation + template-skeleton-grouped split, to verify the reported F1 isn't inflated by MNAR truncation bias or template leakage |
+| 3     | `03_modelling.ipynb`                          | Trains & compares 6 XLM-R / mBERT model configurations                                   |
+| 4     | `04_langgraph_rag.ipynb`                      | LangGraph 3-agent pipeline: detection → SHAP+RAG explanation → risk scoring              |
+| 5     | `05_fastapi_backend.ipynb`                    | FastAPI REST backend + Telegram bot deployment (notebook version)                        |
+| —     | `scamsense_pipeline.py`                       | Consolidated detection → explanation → risk pipeline module used by the deployed API/bot |
 
-**Data flow:** `01` (synthetic scam only)  → `02` (cleaned, balanced, split) → `03` (trained model) → `04`/`05` (inference pipelines using the trained model + SPF taxonomy).
+**Data flow:** `01` (synthetic scam only) → `02` (cleaned, balanced, split) → `03` (trained model) → `04`/`05` (inference pipelines using the trained model + SPF taxonomy). `02a` is a standalone validation branch off `02`, used only to confirm Experiment 2's F1 under a leakage-safe split.
 
 All notebooks are designed to be run directly on **Kaggle** (see [Setup & Running on Kaggle](#setup--running-on-kaggle)).
 
@@ -43,11 +43,12 @@ All notebooks are designed to be run directly on **Kaggle** (see [Setup & Runnin
 
 **Final model:** XLM-RoBERTa (base), fine-tuned — lr=2e-5, batch=32, 5 epochs.
 
-| Metric | Value |
-|---|---|
-| Test F1 | **0.9929** |
-| Test AUC | **0.9990** |
+| Metric                  | Value                          |
+| ----------------------- | ------------------------------ |
+| Test F1                 | **0.9929**                     |
+| Test AUC                | **0.9990**                     |
 | Train/Test accuracy gap | 0.0025–0.0073 (no overfitting) |
+| Leakage-safe test F1 (`02a`, tokenizer-only truncation + skeleton-grouped split) | **0.9901** (Δ -0.0028) |
 
 Full experiment comparison (6 configs including a frozen-mBERT baseline) is logged via MLflow/DagsHub and detailed in the training notebook.
 
@@ -81,6 +82,8 @@ The full dataset (raw + processed) plus shared utility code are hosted on **Kagg
 - **Raw dataset:** [kaggle.com/datasets/bhoovika/scamsense-raw-dataset](https://www.kaggle.com/datasets/bhoovika/scamsense-raw-dataset)
 - **Processed dataset:** [kaggle.com/datasets/bhoovika/scamsense-processed-dataset](https://www.kaggle.com/datasets/bhoovika/scamsense-processed-dataset)
 - **Pipeline utils:** [kaggle.com/datasets/bhoovika/scamsense-utils](https://www.kaggle.com/datasets/bhoovika/scamsense-utils)
+
+- **Optional** (used by `04_langgraph_rag.ipynb` only, for faster offline loading): the trained classifier and sentence embedder are also mirrored as Kaggle Datasets — [`bhoovika/scamsense-xlmroberta-new1`](https://www.kaggle.com/datasets/bhoovika/scamsense-xlmroberta-new1) and [`bhoovika/scamsense-minilm-embedder`](https://www.kaggle.com/datasets/bhoovika/scamsense-minilm-embedder). Attaching them is not required — if omitted, `scamsense_pipeline.init()` falls back to pulling both directly from the Hugging Face Hub, as `05_fastapi_backend.ipynb` already does.
 
 Structure inside each Kaggle dataset:
 ```
