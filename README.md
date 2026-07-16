@@ -79,8 +79,8 @@ ScamSense/
 
 The full dataset (raw + processed) plus shared utility code are hosted on **Kaggle Datasets** so notebooks can attach them directly instead of re-uploading files each session:
 
-- **Raw dataset:** [kaggle.com/datasets/bhoovika/scamsense-raw-dataset](https://www.kaggle.com/datasets/bhoovika/scamsense-raw-dataset)
-- **Processed dataset:** [kaggle.com/datasets/bhoovika/scamsense-processed-dataset](https://www.kaggle.com/datasets/bhoovika/scamsense-processed-dataset)
+- **Raw dataset:** [kaggle.com/datasets/bhoovika/scamsense-raw-dataset](https://www.kaggle.com/datasets/bhoovika/scamscene-raw-dataset)
+- **Processed dataset:** [kaggle.com/datasets/bhoovika/scamsense-processed-dataset](https://www.kaggle.com/datasets/bhoovika/scamscene-processed-dataset)
 - **Pipeline utils:** [kaggle.com/datasets/bhoovika/scamsense-utils](https://www.kaggle.com/datasets/bhoovika/scamsense-utils)
 
 - **Optional** (used by `04_langgraph_rag.ipynb` only, for faster offline loading): the trained classifier and sentence embedder are also mirrored as Kaggle Datasets — [`bhoovika/scamsense-xlmroberta-new1`](https://www.kaggle.com/datasets/bhoovika/scamsense-xlmroberta-new1) and [`bhoovika/scamsense-minilm-embedder`](https://www.kaggle.com/datasets/bhoovika/scamsense-minilm-embedder). Attaching them is not required — if omitted, `scamsense_pipeline.init()` falls back to pulling both directly from the Hugging Face Hub, as `05_fastapi_backend.ipynb` already does.
